@@ -17,8 +17,6 @@ def is_or(case:tuple,Map:list):
 a = int(input("diff:"))
 print(manage_or(0,a,0))#test de la fonction
 
-
-
 def manage_eau(nb_eau:int,difficulté:int,tour:int,nb_champ:int,nb_puits:int,seed:int=None):
     """
     Gère la quantité d'eau au cours des tours : 
