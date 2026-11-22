@@ -17,7 +17,7 @@ def pluie(nb_eau:int,difficulté:int,nb_réservoir_eau:int):
     nb_eau=nb_eau+gain+(gain//2)*nb_réservoir_eau #la pluie apporte un certain gain et si construit chaque reservoir va aussi rapporter ce même
     print("Une forte pluie vous apporte",gain+(gain//2)*nb_réservoir_eau,"unité(s) d'eau")
     if nb_réservoir_eau >=1:
-        print("Les reservoirs d'eau vous ont permis de récupérer",(gain//2)*nb_réservoir_eau,"unité(s) d'eau de plus")
+        print("Les réservoirs d'eau vous ont permis de récupérer",(gain//2)*nb_réservoir_eau,"unité(s) d'eau de plus")
     return nb_eau
     
 def events(nb_eau:int,difficulté:int,nb_réservoir_eau:int):
