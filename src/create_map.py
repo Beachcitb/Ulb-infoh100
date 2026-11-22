@@ -32,5 +32,3 @@ def afficher_map(Map:list):
             ligne += Map[i][j] + "  "#double espace nécéssaire car permet de garder un alignement avec les chiffres des pos
         print(ligne.rstrip())
         ligne = ""
-#permet juste de tester les fonctions 
-afficher_map(create_map())
