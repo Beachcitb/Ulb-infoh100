@@ -1,7 +1,7 @@
-import random
+rimport random
 """ l'objectif de ce fichier est de créer la map et de gérer les differentes fonctions qui permettent de modifier celle-ci,  la map est créer aléatoirement mise a part si une seed est rentrer"""
 def create_map(seed:int=None,difficulty:int=1):
-    """créer la map en fonction de la taille , la seed et la difficulté ( a un impact sur le nombre de ressources, 1 -> normal , 2-> difficile , 3-> désert , 4-> paradis)"""
+    """créer la map en fonction de la taille , la seed et la difficulté ( a un impact sur le nombre de ressources, 1 -> normal , 2-> difficile , 3-> désert , 4-> enfer)"""
     random.seed(seed)#si la seed est set to None ne pas faire de seed et la map est random
     length = int(random.gauss(40,10)) #permet d'avoir des tailles vraiables , mais on part quand meme d'une valeur de ref arbitraire 
     height = int(random.gauss(40,10)) 
