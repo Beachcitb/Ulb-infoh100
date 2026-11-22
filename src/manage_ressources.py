@@ -30,3 +30,16 @@ def manage_eau(nb_eau:int,difficulté:int,tour:int,nb_champ:int,nb_puits:int,see
     else:
         nb_eau = nb_eau - nb_champ + 5*nb_puits
     return nb_eau
+
+
+def debut_energie(difficulté:int,seed:int=None):
+    """fonction qui génère la quanité d'énergie au début. Celle ci devra être changer pour chaque action -1"""
+    random.seed(seed)
+    nb_energie=random.randint(5,10)-difficulté
+    return nb_energie
+
+def debut_engrais(difficulté:int,seed:int=None):
+    """fonction qui génère la quantité d'engrais initialement. Celle ci peut changer avec l'événement : achat d'engrais"""
+    random.seed(seed)
+    nb_engrais=random.randint(10,15)-2*difficulté
+    return nb_engrais
