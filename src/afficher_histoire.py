@@ -12,4 +12,3 @@ def introduction(fichier):
 
 
 
-introduction("histoire_ecrite.txt")
