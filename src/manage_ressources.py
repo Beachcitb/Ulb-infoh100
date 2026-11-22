@@ -26,7 +26,7 @@ def manage_eau(nb_eau:int,difficulté:int,tour:int,nb_champ:int,nb_puits:int,see
     """
     random.seed(seed)
     if tour==0:#initialisation de la quantité d'eau
-        nb_eau = random.randint(10,20)//difficulté #Commence par un nb élevé mais est à revoir selon le nb de champ que l'on voudrait que le joueur ait et nb de tours totales
+        nb_eau = random.randint(40,60)-5*difficulté #Commence par un nb élevé mais est à revoir selon le nb de champ que l'on voudrait que le joueur ait et nb de tours totales
     else:
-        nb_eau = nb_eau - nb_champ + nb_puits
+        nb_eau = nb_eau - nb_champ + 5*nb_puits
     return nb_eau
