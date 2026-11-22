@@ -4,7 +4,7 @@ import random
 def sécheresse(nb_eau:int,difficulté:int):
     """fonction qui détérmine les pertes du à la sécheresse selon la difficulté"""
     if nb_eau >= 4:
-        pertes= random.randint(1,nb_eau//(5-difficulté)) #Avec difficulté de 1 à 4
+        pertes= random.randint(1,(nb_eau//2)//(5-difficulté)) #Avec difficulté de 1 à 4
         nb_eau = nb_eau - pertes 
     else:# Si nb_eau < 4 alors nb_eau//4 = 0 donc ici cas spécifique 
         nb_eau = nb_eau - min(nb_eau,difficulté)        
@@ -13,11 +13,11 @@ def sécheresse(nb_eau:int,difficulté:int):
   
 def pluie(nb_eau:int,difficulté:int,nb_reservoir_eau:int):
     """fonction qui détérmine l'impacte d'une pluie sur le nb_eau en fonction de la difficulté et du nb de reservoir d'eau (batiment) construit"""
-    gain=random.randint(1,10-2*difficulté) #on gagne une quantité d'eau selon la difficulté
-    nb_eau=nb_eau+gain+gain*nb_reservoir_eau #la pluie apporte un certain gain et si construit chaque reservoir va aussi rapporter ce même
-    print("Une forte pluie vous apporte",gain+gain*nb_reservoir_eau,"unité(s) d'eau")
+    gain=random.randint(10,30-2*difficulté) #on gagne une quantité d'eau selon la difficulté
+    nb_eau=nb_eau+gain+(gain//2)*nb_reservoir_eau #la pluie apporte un certain gain et si construit chaque reservoir va aussi rapporter ce même
+    print("Une forte pluie vous apporte",gain+(gain//2)*nb_reservoir_eau,"unité(s) d'eau")
     if nb_reservoir_eau >=1:
-        print("Les reservoirs d'eau vous ont permis de récupérer",gain*nb_reservoir_eau,"unité(s) d'eau de plus")
+        print("Les reservoirs d'eau vous ont permis de récupérer",(gain//2)*nb_reservoir_eau,"unité(s) d'eau de plus")
     return nb_eau
     
 def events(nb_eau:int,difficulté:int,nb_reservoir_eau:int):
