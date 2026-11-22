@@ -1,1 +1,1 @@
-""" gére la population , sont nombre ,sa sasurvit , produit et consommation """
+""" gére la population , sont nombre ,sa survit , produit et consommation """
