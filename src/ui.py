@@ -30,3 +30,4 @@ def afficher_stat(nb_or,difficulty,seed,nb_eau,nb_energie,nb_engrais,nb_robot):
 def afficher_action():
     """afficher les choix et construction possible , viendra plus tard"""
     print("si vous vouler constuire un batiment : appuyer sur \"b\",pour faire une action(planter/angrais..) : appyer sur \"a\" , si vous voulez stopper le tour : appuyer sur \"s\" , si vous voulez finir la partie appuyer sur \"f\",si vous vouler acheter des objets ou robot : appuyer sur \"$\"")
+    return input("choix : ")
