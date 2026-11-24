@@ -1,6 +1,6 @@
 """gérer les differentes ressources , mais pas la population"""
 import random
-def manage_or(nb_or:int,difficulté:int,tour:int:
+def manage_or(nb_or:int,difficulté:int,tour:int)
     """or intial depend de la difficulté choisi et nb_or est le nombre d'or par tour"""
     if tour== 0:#initialise la quantité d'or (dépend de la difficulté 1 facile 4 dur)
         nb_or = random.randint(0,10)//difficulté
