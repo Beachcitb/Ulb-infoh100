@@ -1,7 +1,6 @@
 """gérer les differentes ressources , mais pas la population"""
 import random
-def manage_or(nb_or:int,difficulté:int,tour:int,seed:int=None):
-    random.seed(seed)
+def manage_or(nb_or:int,difficulté:int,tour:int:
     """or intial depend de la difficulté choisi et nb_or est le nombre d'or par tour"""
     if tour== 0:#initialise la quantité d'or (dépend de la difficulté 1 facile 4 dur)
         nb_or = random.randint(0,10)//difficulté
@@ -15,7 +14,7 @@ def is_or(case:tuple,Map:list):
     return False
 
 
-def manage_eau(nb_eau:int,difficulté:int,tour:int,nb_champ:int,nb_puits:int,seed:int=None):
+def manage_eau(nb_eau:int,difficulté:int,tour:int,nb_champ:int,nb_puits:int):
     """
     Gère la quantité d'eau au cours des tours : 
     Selon ma vision chaque tour, "une eau" sera consommer par nb de champ sur la map.
@@ -24,7 +23,6 @@ def manage_eau(nb_eau:int,difficulté:int,tour:int,nb_champ:int,nb_puits:int,see
     L'événement de sécheresse réduit le nb d'eau et celui de pluie l'augmente selon les reservoirs d'eau (batiment) construits (Voir partie events)   
     A revoir si idée différente et peut-être à preciser ce fontionnement dans l'intro du jeu pour le joueur
     """
-    random.seed(seed)
     if tour==0:#initialisation de la quantité d'eau
         nb_eau = random.randint(40,60)-5*difficulté #Commence par un nb élevé mais est à revoir selon le nb de champ que l'on voudrait que le joueur ait et nb de tours totales
     else:
@@ -32,14 +30,12 @@ def manage_eau(nb_eau:int,difficulté:int,tour:int,nb_champ:int,nb_puits:int,see
     return nb_eau
 
 
-def debut_energie(difficulté:int,seed:int=None):
+def debut_energie(difficulté:int):
     """fonction qui génère la quanité d'énergie au début. Celle ci devra être changer pour chaque action -1"""
-    random.seed(seed)
     nb_energie=random.randint(5,10)-difficulté
     return nb_energie
 
-def debut_engrais(difficulté:int,seed:int=None):
+def debut_engrais(difficulté:int):
     """fonction qui génère la quantité d'engrais initialement. Celle ci peut changer avec l'événement : achat d'engrais"""
-    random.seed(seed)
     nb_engrais=random.randint(10,15)-2*difficulté
     return nb_engrais
