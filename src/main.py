@@ -7,10 +7,22 @@ import afficher_histoire
 import ui
 import manage_ressources
 import manage_population
-
+import json
+import random 
+import choix_joueur
 def main():
     """ce charge de tous mettre ensemble dans une boucle de jeux"""
-    afficher_histoire.introduction("histoire_ecrite.txt")
+    #afficher_histoire.introduction("histoire_ecrite.txt")
+    seed = ui.ask_seed()
+    with open("ressources.json","w") as info:
+        json.dumps({"seed":seed},indent = 1)
+    random.seed(seed)
+    ferme = create_map.create_map()#la ferme/map 
+    while True :#conditions temporaire , mais ce qui nous fait perdre c'est si on a plus d'eau ou d'énergie
+        create_map.afficher_map(ferme)
+       choix_joueur..(ui.afficher_action())
 
+    
+    
 main()
 

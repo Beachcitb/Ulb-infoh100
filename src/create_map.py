@@ -16,6 +16,7 @@ def create_map(difficulty:int=1):
     
 def afficher_map(Map:list):
     """permet d'afficher la map ainsi que les positions"""
+    print("voici t'as ferme :  \n")
     ligne = ""
     for j in range(len(Map[0])):#prends une ligne au hasard car de toute facon chaque lignes a la meme longeur     
         if j == 0:
@@ -31,3 +32,4 @@ def afficher_map(Map:list):
             ligne += Map[i][j] + "  "#double espace nécéssaire car permet de garder un alignement avec les chiffres des pos
         print(ligne.rstrip())
         ligne = ""
+
