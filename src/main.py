@@ -15,12 +15,14 @@ def main():
     #afficher_histoire.introduction("histoire_ecrite.txt")
     seed = ui.ask_seed()
     with open("ressources.json","w") as info:
-        json.dumps({"seed":seed},indent = 1)
+        json.dump({"seed":seed},info)
     random.seed(seed)
     ferme = create_map.create_map()#la ferme/map 
     while True :#conditions temporaire , mais ce qui nous fait perdre c'est si on a plus d'eau ou d'énergie
         create_map.afficher_map(ferme)
-       choix_joueur..(ui.afficher_action())
+        if choix_joueur.action_selectionner(ui.afficher_action()) == 0:
+            break
+    
 
     
     
