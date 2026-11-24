@@ -16,4 +16,4 @@ def action_selectionner(choix:str):
             return 1
         case _:
             print("valeur entré n'est pas valide")
-            ui.afficher_action()
+            action_selectionner(ui.afficher_action())
