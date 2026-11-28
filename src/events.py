@@ -39,6 +39,14 @@ def achat_engrais(nb_or:int,nb_engrais:int):
             nb_or=nb_or-prix_propose_engrais
             nb_engrais=nb_engrais+quantite_propose_engrais
             return nb_or,nb_engrais
+
+def destruction(nb_or_initial:int,nb_engrais_initial:int,nb_eau_initial:int):
+    """fonction qui détruit la ferme, mais a très peu de chance de se produire"""
+    nb_or=nb_or_initial
+    nb_engrais=nb_engrais_initial
+    nb_eau=nb_eau_initial
+    nb_réservoir_eau=0
+    return nb_or,nb_engrais,nb_eau,nb_réservoir_eau
     
     
 def events(difficulté:int,nb_or:int,nb_engrais:int,nb_eau:int,nb_réservoir_eau:int):
