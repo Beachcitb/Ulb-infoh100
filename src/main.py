@@ -14,12 +14,14 @@ def main():
     """ce charge de tous mettre ensemble dans une boucle de jeux"""
     #afficher_histoire.introduction("histoire_ecrite.txt")
     seed = ui.ask_seed()
+    difficulty = ui.ask_difficulty()
     with open("ressources.json","w") as info:
-        json.dump({"seed":seed},info)
+        json.dump({"seed":seed,"difficulty":difficulty},info)
     random.seed(seed)
     ferme = create_map.create_map()#la ferme/map 
     while True :#conditions temporaire , mais ce qui nous fait perdre c'est si on a plus d'eau ou d'énergie
         create_map.afficher_map(ferme)
+        events.events()
         if choix_joueur.action_selectionner(ui.afficher_action()) == 0:
             break
     

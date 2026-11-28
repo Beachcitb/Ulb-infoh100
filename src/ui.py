@@ -20,16 +20,16 @@ def ask_seed():
     seed = input("enter a seed , it can be any value (integer, float, str, bytes or bytearray) :")
     return seed
 
-def afficher_stat(nb_or,difficulty,seed,nb_eau,nb_energie,nb_engrais,nb_robot):
+def afficher_stat(fichier_json):
     """affiche les informations """
     info_gen = "Game avec difficulté : {difficulty} et seed : {seed}"
     txt = "tu as pour ce tour: {nb_or} gold ,{nb_eau} d'unité d'eau,{nb_energie} d'énergie,{nb_engrais} unité d'engrais,{nb_robot} de robot qui travail pour toi"
-    print(info_gen.format(difficulty=difficulty,seed=seed))
-    print(txt.format(nb_or=nb_or,nb_eau=nb_eau,nb_energie=nb_energie,nb_engrais=nb_engrais,nb_robot=nb_robot))
+    with open(fichier_json,"r") as info :
+        """manque la structure du fichier json avec les quantité d'eau etc ..."""
+        print(info_gen.format(difficulty=difficulty,seed=seed))
+        print(txt.format(nb_or=nb_or,nb_eau=nb_eau,nb_energie=nb_energie,nb_engrais=nb_engrais,nb_robot=nb_robot))
 
 def afficher_action():
     """afficher les choix et construction possible , viendra plus tard"""
     print("si vous vouler constuire un batiment : appuyer sur \"b\",pour faire une action(planter/angrais..) : appyer sur \"a\" , si vous voulez stopper le tour : appuyer sur \"s\" , si vous voulez finir la partie appuyer sur \"f\",si vous vouler acheter des objets ou robot : appuyer sur \"$\"")
     return input("choix : ")
-def fin():
-    """imprime le message de fin avec les stats et le bilan """
